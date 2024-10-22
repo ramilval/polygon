@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+
+int main() {
+	std::vector<std::string> arr = { "apple", "apple", "apple", "banan", "orange", "orange" };
+	//массив (24 байта) * количество элементов
+
+
+	std::unordered_map<std::string, int> dc;
+	//словарь n * (24 байта) + 85
+
+	for (std::string i : arr) {
+		dc[i]++;
+	}
+	
+	for (std::string i : arr) {
+		std::cout << dc[i] << " ";
+	}
+	
+	return 0;
+}
